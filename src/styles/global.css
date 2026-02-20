@@ -1,0 +1,51 @@
+/* ================= GLOBAL RESET ================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ================= BASE BODY ================= */
+
+body {
+  background: #f5f7fb;
+  color: #1f2937;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ================= LAYOUT CONTAINER ================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Prevent media overflow */
+img,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Better link defaults */
+a {
+  color: inherit;
+}
+
+/* Form consistency */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

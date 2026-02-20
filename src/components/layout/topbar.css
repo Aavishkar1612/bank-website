@@ -1,0 +1,43 @@
+.topbar {
+  background: #0b3d91;
+  color: white;
+  font-size: 13px;
+}
+
+.topbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.topbar-left span {
+  margin-right: 8px;
+}
+
+.divider {
+  opacity: 0.6;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 18px;
+}
+
+.topbar-right a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.topbar-right a:hover {
+  opacity: 0.85;
+}
+
+.login-btn {
+  background: white;
+  color: #0b3d91 !important;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}

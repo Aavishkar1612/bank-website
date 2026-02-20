@@ -1,0 +1,126 @@
+/* ================= HERO SECTION - PREMIUM ================= */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 90px 60px;
+
+  /* PREMIUM DARK FINTECH GRADIENT */
+  background: linear-gradient(
+    135deg,
+    #0a192f 0%,     /* deep navy */
+    #112240 40%,    /* rich blue */
+    #1e3a8a 100%    /* royal blue */
+  );
+
+  color: white;
+}
+
+/* Content Width */
+.hero-content {
+  max-width: 800px;
+}
+
+/* Heading */
+.hero h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+}
+
+/* Description */
+.hero p {
+  font-size: 19px;
+  margin-bottom: 45px;
+  color: #dbeafe;
+  line-height: 1.6;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.btn-primary {
+  padding: 15px 34px;
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  color: #111;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.btn-secondary {
+  padding: 15px 34px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #0a192f;
+}
+
+/* ================= STATS ================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 30px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 25px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

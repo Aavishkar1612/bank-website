@@ -1,0 +1,542 @@
+/* ======================================================
+   GLOBAL RESET & BASE
+====================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.7;
+  color: #1c2b39;
+  background-color: #f4f6f9;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ======================================================
+   PREMIUM BANK DESIGN SYSTEM (SBI / HDFC STYLE)
+====================================================== */
+
+:root {
+  /* Primary Banking Blue */
+  --primary: #0b3c6d;        /* Deep Navy */
+  --primary-dark: #072a4d;   /* Darker Navy */
+  --primary-light: #e8f0f8;  /* Light Blue Tint */
+
+  /* Premium Accent */
+  --accent-gold: #c5a046;
+
+  /* Text */
+  --text-dark: #1c2b39;
+  --text-light: #6b7280;
+
+  /* Backgrounds */
+  --bg-light: #f4f6f9;
+  --bg-soft: #ffffff;
+
+  /* Borders */
+  --border-light: #e2e8f0;
+
+  --white: #ffffff;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 14px rgba(11, 60, 109, 0.08);
+  --shadow-md: 0 10px 30px rgba(11, 60, 109, 0.12);
+
+  --radius: 14px;
+  --transition: all 0.3s ease;
+}
+
+/* ======================================================
+   CONTAINER STRUCTURE
+====================================================== */
+
+.services-container,
+.service-page,
+.service-detail {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* ======================================================
+   TYPOGRAPHY
+====================================================== */
+
+.services-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.services-subtitle {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 60px;
+}
+
+.service-page > h1,
+.service-detail > h2,
+.service-section > h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--primary);
+  text-align: center;
+}
+
+.service-page p,
+.service-detail p {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 18px;
+}
+
+/* ======================================================
+   GRID SYSTEM
+====================================================== */
+
+.services-grid,
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+/* ======================================================
+   SERVICE CARD
+====================================================== */
+
+.service-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-gold);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.service-card p {
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+/* ======================================================
+   HERO SECTION
+====================================================== */
+
+.service-hero {
+  text-align: center;
+  padding: 110px 20px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius);
+  margin-bottom: 90px;
+  box-shadow: 0 20px 40px rgba(11, 60, 109, 0.25);
+}
+
+.service-hero h1 {
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.service-hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* ======================================================
+   BUTTON SYSTEM
+====================================================== */
+
+.primary-btn,
+.secondary-btn,
+.apply-btn {
+  padding: 14px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.3px;
+}
+
+/* Primary Button */
+
+.primary-btn,
+.apply-btn {
+  background: var(--accent-gold);
+  color: var(--white);
+  border: none;
+}
+
+.primary-btn:hover,
+.apply-btn:hover {
+  background: #a8832e;
+  transform: translateY(-2px);
+}
+
+/* Secondary Button */
+
+.secondary-btn {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.primary-btn:active,
+.secondary-btn:active {
+  transform: scale(0.97);
+}
+
+.large {
+  padding: 16px 36px;
+  font-size: 16px;
+}
+
+/* CTA BUTTON GROUP */
+
+.service-cta {
+  margin-top: 35px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ======================================================
+   LIGHT SECTION
+====================================================== */
+
+.service-section {
+  margin: 100px 0;
+}
+
+.light {
+  background: var(--primary-light);
+  padding: 70px;
+  border-radius: var(--radius);
+}
+
+/* ======================================================
+   BOTTOM CTA
+====================================================== */
+
+.service-bottom-cta {
+  margin-top: 120px;
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--primary-dark);
+  color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(7, 42, 77, 0.25);
+}
+
+.service-bottom-cta h2 {
+  margin-bottom: 18px;
+}
+
+.service-bottom-cta p {
+  opacity: 0.95;
+  margin-bottom: 30px;
+}
+
+/* ======================================================
+   ACCOUNT FORM
+====================================================== */
+
+.account-form {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  font-size: 14px;
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(197, 160, 70, 0.2);
+}
+
+.account-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 768px) {
+  .service-hero {
+    padding: 80px 20px;
+  }
+
+  .service-hero h1 {
+    font-size: 32px;
+  }
+
+  .service-section {
+    margin: 60px 0;
+  }
+
+  .light {
+    padding: 40px 20px;
+  }
+
+  .services-container,
+  .service-page,
+  .service-detail {
+    padding: 50px 16px;
+  }
+}
+.premium-section {
+  padding: 60px 0;
+}
+
+.premium-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+  padding: 40px;
+  border-radius: 16px;
+  margin-bottom: 50px;
+}
+
+.hero-highlight-card {
+  background: white;
+  color: #1e3a8a;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  margin: 40px 0 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.info-card,
+.faq-card {
+  display: flex;
+  gap: 20px;
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 14px;
+  margin: 30px 0;
+}
+
+.premium-form-wrapper {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+}
+
+.premium-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.premium-form input,
+.premium-form select,
+.premium-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.premium-form textarea {
+  grid-column: span 2;
+}
+
+.apply-btn {
+  grid-column: span 2;
+  padding: 14px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.success-message {
+  background: #d1fae5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.loan-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e40af);
+  color: white;
+  padding: 50px;
+  border-radius: 18px;
+  margin-bottom: 50px;
+}
+
+.loan-highlight-card {
+  background: white;
+  color: #1e40af;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.loan-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.emi-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: #f1f5f9;
+  padding: 30px;
+  border-radius: 16px;
+  margin: 40px 0;
+  justify-content: space-between;
+}
+
+.outline-btn {
+  padding: 12px 20px;
+  border: 2px solid #1e40af;
+  background: transparent;
+  color: #1e40af;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.outline-btn:hover {
+  background: #1e40af;
+  color: white;
+}
+.personal-hero {
+  background: linear-gradient(135deg, #111827, #7c3aed);
+}
+.education-hero {
+  background: linear-gradient(135deg, #0f172a, #059669);
+}
+.credit-hero {
+  background: linear-gradient(135deg, #111827, #2563eb);
+}
+
+.credit-card-mock {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 30px;
+  border-radius: 18px;
+  width: 260px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.variant-card {
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.silver {
+  background: linear-gradient(135deg, #9ca3af, #d1d5db);
+  color: #111;
+}
+
+.gold {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+}
+
+.platinum {
+  background: linear-gradient(135deg, #4b5563, #9ca3af);
+}

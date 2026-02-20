@@ -1,0 +1,107 @@
+/* ================= HEADER ================= */
+
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 100;
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+  background: #0b3d91;
+  color: #ffffff;
+  padding: 8px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 0.3px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  gap: 20px;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0b3d91;
+  line-height: 1.2;
+}
+
+.logo p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #777;
+  margin-top: 2px;
+}
+
+/* ================= NAV LINKS ================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #0b3d91;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #0b3d91;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 8px 16px 0 0;
+  }
+}
