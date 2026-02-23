@@ -1,54 +1,53 @@
 import React from "react";
 import "../services.css";
 
-
 /* ============================= */
 /*        DATA CONFIG            */
 /* ============================= */
 
 const features = [
   {
-    title: "Fund Transfers",
+    title: "Fund Transfer Simulation",
     description:
-      "Instantly transfer money using NEFT, RTGS and IMPS with real-time tracking.",
+      "Simulated NEFT, RTGS and IMPS transactions for academic demonstration purposes.",
   },
   {
-    title: "Bill Payments",
+    title: "Bill Payment Demo",
     description:
-      "Pay electricity, mobile, broadband and utility bills in one place without hassle.",
+      "Practice utility bill payment workflows in a controlled demo environment.",
   },
   {
-    title: "Account Statements",
+    title: "Account Statement Preview",
     description:
-      "Download statements, view transaction history and monitor spending anytime.",
+      "View sample transaction history and downloadable statement formats.",
   },
   {
-    title: "24/7 Secure Access",
+    title: "Security Demonstration",
     description:
-      "Multi-layer security, OTP verification and encrypted transactions keep your account safe.",
+      "OTP validation and authentication flow shown for educational understanding.",
   },
 ];
 
 const benefits = [
   {
-    title: "Easy to Use",
+    title: "Student Friendly Interface",
     description:
-      "Simple interface designed for customers of all age groups.",
+      "Designed for learning banking workflows in a simple and structured way.",
   },
   {
-    title: "Instant Transactions",
+    title: "Realistic Banking Simulation",
     description:
-      "Transfer funds and pay bills in seconds without visiting branch.",
+      "Mimics real-world digital banking features without processing real money.",
   },
   {
-    title: "High Security",
+    title: "Security Concepts",
     description:
-      "Advanced authentication and fraud protection systems.",
+      "Demonstrates authentication, authorization and fraud awareness concepts.",
   },
   {
-    title: "Paperless Banking",
+    title: "Paperless Workflow Demo",
     description:
-      "Manage everything digitally — no forms, no waiting lines.",
+      "Shows how digital banking replaces traditional branch-based processes.",
   },
 ];
 
@@ -59,28 +58,45 @@ const benefits = [
 export default function InternetBanking() {
   return (
     <div className="service-page">
-      
+
+      {/* ================= DISCLAIMER ================= */}
+      <div
+        style={{
+          backgroundColor: "#fff3cd",
+          color: "#856404",
+          padding: "15px",
+          textAlign: "center",
+          fontWeight: "600",
+          borderBottom: "1px solid #ffeeba",
+        }}
+      >
+        ⚠ This is a Academic Demo Project created by Aavishkar Bhosale.
+        This website does NOT provide real banking services.
+        Please do NOT enter real personal or financial credentials.
+      </div>
+
       {/* ================= HERO ================= */}
       <section className="service-hero">
-        <h1>Internet Banking</h1>
+        <h1>Digital Banking Simulation Portal</h1>
         <p>
-          Experience secure, fast and convenient banking from anywhere.
-          Manage your accounts, transfer funds and pay bills with complete safety.
+          Experience a simulated digital banking environment built for
+          academic demonstration. Learn how online banking systems function,
+          including transfers, bill payments and security workflows.
         </p>
 
         <div className="service-cta">
           <button type="button" className="primary-btn">
-            Login to Internet Banking
+            Demo Login Portal
           </button>
           <button type="button" className="secondary-btn">
-            Register Now
+            Create Demo Account
           </button>
         </div>
       </section>
 
       {/* ================= FEATURES ================= */}
       <section className="service-section">
-        <h2>Key Features</h2>
+        <h2>Simulation Features</h2>
 
         <div className="service-grid">
           {features.map((item, index) => (
@@ -94,7 +110,7 @@ export default function InternetBanking() {
 
       {/* ================= BENEFITS ================= */}
       <section className="service-section light">
-        <h2>Why Choose Our Internet Banking?</h2>
+        <h2>Why This Project?</h2>
 
         <div className="service-grid">
           {benefits.map((item, index) => (
@@ -108,12 +124,13 @@ export default function InternetBanking() {
 
       {/* ================= FINAL CTA ================= */}
       <section className="service-bottom-cta">
-        <h2>Start Banking Online Today</h2>
+        <h2>Explore Digital Banking Concepts</h2>
         <p>
-          Join thousands of customers using secure and smart digital banking.
+          This project demonstrates modern banking architecture,
+          authentication systems and transaction workflows for learning purposes.
         </p>
         <button type="button" className="primary-btn large">
-          Activate Internet Banking
+          Launch Demo System
         </button>
       </section>
     </div>
