@@ -12,6 +12,10 @@ export default function HeroSection() {
           Experience secure, fast and intelligent banking with AB Fintech.
           Manage accounts, apply loans and access digital banking anytime,
           anywhere.
+          
+          ( ⚠ This is a Academic Demo Project created by Aavishkar Bhosale.
+        This website does NOT provide real banking services.
+        Please do NOT enter real personal or financial credentials.)
         </p>
 
         <div className="hero-buttons">
